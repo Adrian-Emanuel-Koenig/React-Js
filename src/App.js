@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Guitar from './components/Guitar';
+import NavBar from './components/NavBar';
 
 function App() {
+let myobj = {id: 0, nombre: "Adrián"};
+myobj= {...myobj, edad:27}
+const { nombre, id }= myobj;
+console.log(nombre);
+console.log(id);
+
+console.log(myobj);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <body>
+      <header >
+          <NavBar />
       </header>
+      <main>
+        <div>
+          <Guitar />
+        </div>
+      </main>
+      </body>
     </div>
   );
 }
