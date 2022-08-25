@@ -11,7 +11,7 @@ function App() {
           <NavBar />
       </header>
       <main>
-          <ItemListContainer/>
+          <ItemListContainer greeting={"Gibson"} />
       </main>
       </body>
     </div>
