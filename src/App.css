@@ -2,11 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: cursive;
+
 }
 
 body {
-  background: url(../src/components/imgs/playing-guitar-jared-dines.gif);
+  background: url(../src/assets/imgs/playing-guitar-jared-dines.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  color: white;
+}
+
+main {
+  padding: 2% 5%;
+}
+header {
+  padding: 3px;
+}
+h5, h6:hover{
+  text-shadow: 0 0 10px white, 0 0 20px rgb(81, 134, 212), 0 0 30px cyan ;
+  cursor: pointer;
 }

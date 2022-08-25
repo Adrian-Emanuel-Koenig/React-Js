@@ -1,122 +1,56 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import ButtonBase from '@mui/material/ButtonBase';
-import Typography from '@mui/material/Typography';
+import React from 'react'
 
-const images = [
-  {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: 'Instruments',
-    width: '40%',
-  },
-  {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Accessories',
-    width: '30%',
-  },
-  {
-    url: '/static/images/buttons/camera.jpg',
-    title: 'Services',
-    width: '30%',
-  },
-];
+const products = [{
+  id: 0,
+  mark: "Gibson",
+  tag: "Les Paul Standard 50s - Heritage Cherry Sunburst",
+  price: 3.000,
+  img: "../src/assets/imgs/Guitars/__static.gibson.com_product-images_USA_USAUBC849_Heritage_Cherry_Sunburst_front-500x500.png"
+},{
+  id: 1,
+  mark: "Gibson",
+  tag: "Les Paul Special Tribute - P-90 - Worn White Satin",
+  price: 1.000,
+  img: "../src/assets/imgs/Guitars/__static.gibson.com_product-images_USA_USAPF9427_Worn_White_Satin_front-500_500.png"
+},{
+  id: 2,
+  mark: "Gibson",
+  tag: "Jerry Cantrell Wino Les Paul Custom (Aged & Signed) - Wine Red",
+  price: 8.000,
+  img: "../src/assets/imgs/Guitars/__static.gibson.com_product-images_Custom_CUSKBN534_Wine_Red_front-500_500.png"
+},{
+  id: 3,
+  mark: "Gibson",
+  tag: "1957 Les Paul Custom Reissue - Ebony 2-Pickup",
+  price: 6.900,
+  img: "../src/assets/imgs/Guitars/3.png"
+},{
+  id: 4,
+  mark: "Gibson",
+  tag: "Slash Les Paul Standard Limited 4 Album Edition - Translucent Cherry",
+  price: 3.299,
+  img: "../src/assets/imgs/Guitars/4.png"
+},{
+  id: 5,
+  mark: "Gibson",
+  tag: "Les Paul Special Double Cut Figured Top - Cobra Burst",
+  price: 4.999,
+  img: "../src/assets/imgs/Guitars/5.png"
+}]
 
-const ImageButton = styled(ButtonBase)(({ theme }) => ({
-  position: 'relative',
-  height: 200,
-  [theme.breakpoints.down('sm')]: {
-    width: '100% !important', // Overrides inline-style
-    height: 100,
-  },
-  '&:hover, &.Mui-focusVisible': {
-    zIndex: 1,
-    '& .MuiImageBackdrop-root': {
-      opacity: 0.15,
-    },
-    '& .MuiImageMarked-root': {
-      opacity: 0,
-    },
-    '& .MuiTypography-root': {
-      border: '4px solid currentColor',
-    },
-  },
-}));
+export default function Gibson() {
 
-const ImageSrc = styled('span')({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center 40%',
-});
-
-const Image = styled('span')(({ theme }) => ({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  color: theme.palette.common.white,
-}));
-
-const ImageBackdrop = styled('span')(({ theme }) => ({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  backgroundColor: theme.palette.common.black,
-  opacity: 0.4,
-  transition: theme.transitions.create('opacity'),
-}));
-
-const ImageMarked = styled('span')(({ theme }) => ({
-  height: 3,
-  width: 18,
-  backgroundColor: theme.palette.common.white,
-  position: 'absolute',
-  bottom: -2,
-  left: 'calc(50% - 9px)',
-  transition: theme.transitions.create('opacity'),
-}));
-
-export default function Guitar() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
-      {images.map((image) => (
-        <ImageButton
-          focusRipple
-          key={image.title}
-          style={{
-            width: image.width,
-          }}
-        >
-          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-          <ImageBackdrop className="MuiImageBackdrop-root" />
-          <Image>
-            <Typography
-              component="span"
-              variant="subtitle1"
-              color="inherit"
-              sx={{
-                position: 'relative',
-                p: 4,
-                pt: 2,
-                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-              }}
-            >
-              {image.title}
-              <ImageMarked className="MuiImageMarked-root" />
-            </Typography>
-          </Image>
-        </ImageButton>
-      ))}
-    </Box>
-  );
+    <div>
+      <h2>Les Paul Models</h2>
+    <ul className='lista'>
+      <li>{products[0].tag}</li>
+      <li>{products[1].tag}</li>    
+      <li>{products[2].tag}</li>
+      <li>{products[3].tag}</li>
+      <li>{products[4].tag}</li>
+      <li>{products[5].tag}</li>
+    </ul>
+</div>
+  )
 }
