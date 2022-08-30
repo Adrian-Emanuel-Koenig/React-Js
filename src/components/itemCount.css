@@ -1,0 +1,29 @@
+.itemCount-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.itemCount-buttons{
+    display: flex;
+}
+.itemCount-buttons button {
+    width: 30px;
+    padding: 5%;
+    background-color: aqua;
+    border-radius: 10px
+}
+.itemCount-buttons div {
+margin: 5px;
+}
+
+.buttonBuy{
+    margin: 10px;
+    width: 120px;
+    font-size: 1.2rem;
+    background-color: aqua;
+    border-radius: 10px;
+}
