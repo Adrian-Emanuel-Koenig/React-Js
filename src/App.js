@@ -18,7 +18,7 @@ return (
           <NavBar />
       </header>
       <main>
-          <ItemListContainer greeting={"Gibson"} />
+          <ItemListContainer greeting={"Guitars"} />
           <ItemCount stock={stock} initial={initial} onAdd={onAdd} Remove={Remove} />
       </main>
       </body>

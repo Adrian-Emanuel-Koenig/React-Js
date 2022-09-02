@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
+import { customFetch } from './customFetch';
+import products from './Guitar';
+import ItemList from './ItemList';
 import "./itemListContainer.css";
-import Gibson from './Guitar';
 
-export default function ItemListContainer({ greeting }) {
+
+export default function ItemListContainer({greeting}) {
+
+const [listProducts, setListProducts]=useState([])
+
+useEffect(() => {
+customFetch(products)
+.then(data=> setListProducts(data))
+},[])
+
+console.log(listProducts);
   return (
-    <div className='itemList--container'>
-      {greeting}
-    <Gibson/>
-    </div>
-  );
-};
+    <>
+    <div>{greeting}</div>
+    <ItemList listProducts={listProducts}/>
+    </>
+  )
+}
