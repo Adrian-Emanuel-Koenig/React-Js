@@ -1,13 +1,15 @@
 import React from 'react'
 
 function Item({product}) {
+	const {mark, tag, img, price, stock} = product;
   return (
-	<div>
-		<h3>{product.mark}</h3>
-		<h4>{product.tag}</h4>
-		<img src={product.img}/>
-		<p>${product.price}</p>
-		<p>Stock: {product.stock}</p>
+	<div className='Item-Card'>
+		<h3>{mark}</h3>
+		<h4>{tag}</h4>
+		<img src={img}/>
+		<p>${price}</p>
+		{/* <p>Stock: {stock}</p> */}
+		<button> View </button>
 	</div>
   )
 }
