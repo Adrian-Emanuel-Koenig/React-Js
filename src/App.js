@@ -3,6 +3,7 @@ import { useState } from "react";
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import ItemCount from './components/ItemCount';
+import ItemDetailContainer from './components/Item Detail/ItemDetailContainer';
 
 function App() {
 
@@ -20,6 +21,7 @@ return (
       <main>
           <ItemListContainer greeting={"Guitars"} />
           <ItemCount stock={stock} initial={initial} onAdd={onAdd} Remove={Remove} />
+          <ItemDetailContainer/>
       </main>
       </body>
     </div>
