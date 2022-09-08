@@ -4,6 +4,9 @@ import "./itemDetail.css";
 
 function ItemDetail({productDetail}) {
 	const {mark, tag, img, price, stock} = productDetail;
+    const onAdd = () =>{
+        console.log("Bought");
+    }
 
     return (
         <div className='Item-Detail'>
@@ -12,7 +15,7 @@ function ItemDetail({productDetail}) {
             <img src={img}/>
             <p>${price}</p>
             <p>Stock: {stock}</p>
-            <ItemCount />
+            <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
         </div>
     )
 }
