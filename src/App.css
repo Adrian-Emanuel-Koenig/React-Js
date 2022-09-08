@@ -31,7 +31,7 @@ main {
   margin: 20px;
   width: 25%;
   border: 1px solid rgb(255, 255, 255);
-  box-shadow: 0 0 20px rgb(107, 0, 107), 0 0 30px rgb(107, 0, 107), inset 0 0 50px rgb(92, 5, 92), inset 0 0 40px rgb(92, 5, 92) ;
+  box-shadow: 0 0 20px rgb(107, 0, 107), 0 0 30px rgb(107, 0, 107), inset 0 0 10px rgb(92, 5, 92), inset 0 0 20px rgb(92, 5, 92) ;
   font-size: 1.2rem;
 }
 .Item-Card img{
@@ -49,6 +49,10 @@ height: 400px;
   margin-top: 5px;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
 header {
   padding: 3px;
 }

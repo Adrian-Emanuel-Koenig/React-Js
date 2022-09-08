@@ -4,16 +4,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-	width: 100%;
-	text-align: center;
-	background-color: #b806ff34;
+    width: 100%;
+    text-align: center;
+    background-color: #b806ff34;
     border-radius: 50px;
-	border: 2px solid white;
+    border: 2px solid white;
     box-shadow: 0 0 15px white;
 }
-.tittle{
-position: absolute;
-visibility: hidden;
+
+.tittle {
+    position: absolute;
+    visibility: hidden;
 }
 
 .lista {
