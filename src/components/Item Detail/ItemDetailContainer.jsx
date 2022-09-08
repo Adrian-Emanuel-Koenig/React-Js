@@ -8,7 +8,7 @@ import ItemDetail from './ItemDetail'
 function ItemDetailContainer() {
   const [productDetail, setProductDetail]= useState({})
   const [loading, setLoading]= useState(true)
-  const {id} =useParams()
+  const{id} =useParams()
 
 useEffect(()=>{
 data

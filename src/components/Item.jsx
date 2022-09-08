@@ -11,7 +11,7 @@ function Item({product}) {
 		<h4>{tag}</h4>
 		<img src={img} alt={tag}/>
 		<p>${price}</p>
-		<Link to={`/category/${id}`}><button>View</button></Link>
+		<Link to={`/item/${id}`}><button>View</button></Link>
 	</div>
   )
 }
