@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./itemCount.css";
 
-export default function ItemCount({stock, initial, onAdd}) {
-const[count, setCount]=useState(initial)
+export default function ItemCount({stock, initial, onAdd, count, setCount}) {
 
 const remove = () =>{
     if(count > initial){

@@ -6,3 +6,16 @@ padding: 2%;
 border-radius: 50px;
 border: 2px solid ;
 }
+
+.btnCart{
+    background-color: cyan;
+    padding: 1%;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btnCart:hover{
+    background-color: rgb(39, 0, 88);
+    color: white;
+}
