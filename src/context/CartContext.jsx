@@ -10,7 +10,7 @@ export const CartProvider = ({children}) => {
         if (itemsInCart) {
             const refresh = cart.map((prod)=>{
                 if(prod.id === item.id){
-                    return {...prod, quatity:prod.quantity + item.quantity}
+                    return {...prod, quantity:prod.quantity + item.quantity}
                 }else{
                     return prod
                 }
