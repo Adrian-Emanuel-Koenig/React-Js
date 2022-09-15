@@ -1,15 +1,22 @@
 import React, { useState } from 'react'
 import ItemCount from '../ItemCount'
 import "./itemDetail.css";
+import { useCart } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 function ItemDetail({productDetail}) {
     const[count, setCount]=useState(1)
     const [bought, setBought] = useState(false)
     const {mark, tag, img, price, stock} = productDetail;
+    const {addItem}=useCart();
 
     const onAdd = () => {
-        console.log(`Bought: ${count} ${mark} ${tag}`);
+        const purchase = {
+            productDetail, 
+            quantity: count
+        }
         setBought(true)
+        addItem(purchase)
     }
 
     return (
@@ -21,7 +28,7 @@ function ItemDetail({productDetail}) {
             <p>Stock: {stock}</p>
             {!bought
                 ? <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount}/>
-                : <button className='btnCart'>Go to cart</button>
+                : <button className='btnCart' ><Link to={"/cart"}>Go to cart</Link></button>
             }
         </div>
     )
