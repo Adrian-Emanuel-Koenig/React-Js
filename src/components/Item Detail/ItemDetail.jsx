@@ -7,12 +7,15 @@ import { Link } from 'react-router-dom';
 function ItemDetail({productDetail}) {
     const[count, setCount]=useState(1)
     const [bought, setBought] = useState(false)
-    const {mark, tag, img, price, stock} = productDetail;
+    const {id, mark, tag, img, price, stock} = productDetail;
     const {addItem}=useCart();
 
     const onAdd = () => {
         const purchase = {
-            productDetail, 
+            id, 
+            mark,
+            tag,
+            price,
             quantity: count
         }
         setBought(true)
