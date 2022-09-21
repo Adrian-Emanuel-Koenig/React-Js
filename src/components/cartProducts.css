@@ -1,0 +1,12 @@
+.cartProducts{
+    background-color: white;
+    color: black;
+    padding: 2%;
+    border-radius: 50px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.cartProducts button{
+    margin: 5px 0;
+    border: 1px solid rgb(55, 55, 241)
+}

@@ -3,7 +3,7 @@ const products = [{
     mark: "Gibson",
     tag: "Les Paul Standard 50s - Heritage Cherry Sunburst",
     category: "guitar",
-    price: 2.999,
+    price: 2999,
     img: require("../assets/imgs/Guitars/__static.gibson.com_product-images_USA_USAUBC849_Heritage_Cherry_Sunburst_front-500x500.png"),
     stock: 6
 }, {
@@ -11,7 +11,7 @@ const products = [{
     mark: "Gibson",
     tag: "Les Paul Special Tribute - P-90 - Worn White Satin",
     category: "guitar",
-    price: 1.999,
+    price: 1999,
     img: require("../assets/imgs/Guitars/__static.gibson.com_product-images_USA_USAPF9427_Worn_White_Satin_front-500_500.png"),
     stock: 4
 }, {
@@ -19,7 +19,7 @@ const products = [{
     mark: "Gibson",
     tag: "Jerry Cantrell Wino Les Paul Custom (Aged & Signed) - Wine Red",
     category: "guitar",
-    price: 7.999,
+    price: 7999,
     img: require("../assets/imgs/Guitars/__static.gibson.com_product-images_Custom_CUSKBN534_Wine_Red_front-500_500.png"),
     stock: 5
 }, {
@@ -27,7 +27,7 @@ const products = [{
     mark: "Gibson",
     tag: "1957 Les Paul Custom Reissue - Ebony 2-Pickup",
     category: "guitar",
-    price: 6.899,
+    price: 6899,
     img: require("../assets/imgs/Guitars/3.png"),
     stock: 5
 }, {
@@ -35,7 +35,7 @@ const products = [{
     mark: "Gibson",
     tag: "Slash Les Paul Standard Limited 4 Album Edition - Translucent Cherry",
     category: "guitar",
-    price: 3.299,
+    price: 3299,
     img: require("../assets/imgs/Guitars/4.png"),
     stock: 9
 }, {
@@ -43,7 +43,7 @@ const products = [{
     mark: "Gibson",
     tag: "Les Paul Special Double Cut Figured Top - Cobra Burst",
     category: "guitar",
-    price: 4.999,
+    price: 4999,
     img: require("../assets/imgs/Guitars/5.png"),
     stock: 3
 }, {

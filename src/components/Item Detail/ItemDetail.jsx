@@ -15,6 +15,7 @@ function ItemDetail({productDetail}) {
             id, 
             mark,
             tag,
+            img,
             price,
             quantity: count
         }
