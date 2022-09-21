@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import CartWidget from './CartWidget';
 import { NavLink } from 'react-router-dom';
 
@@ -24,7 +23,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" sx={{ flexGrow: 1}}>
             <NavLink to={'/category/bass'}>Bass</NavLink>
           </Typography>
-          <Button color="inherit"><CartWidget /></Button>
+          <NavLink color="inherit" to={"/cart"}><CartWidget /></NavLink>
         </Toolbar>
       </AppBar>
     </Box>

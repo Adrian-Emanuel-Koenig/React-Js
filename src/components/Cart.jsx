@@ -1,12 +1,30 @@
+import { Button } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import CartProducts from './CartProducts'
 
 function Cart() {
 
-const {cart}=useCart()
-console.log('Ready to buy: ', cart)
+const {cart, cartTotal, clear}=useCart()
+
   return (
-    <div>Cart</div>
+    <div>
+      {
+        !cart.length
+        ?<div>
+          <h3>Cart empty</h3>
+          <Link to={('/')}><Button> Back to Home</Button></Link>
+        </div>
+        :<div>
+          <h3>Cart</h3>
+            {cart.map((bought)=> <CartProducts key={bought.id} bought={bought}/>)}
+          <span>Total payment: ${cartTotal()}</span>
+          <Button onClick={clear}>Clear Cart</Button>
+          <Button>Buy products</Button>
+        </div>
+      }
+    </div>
   )
 }
 
