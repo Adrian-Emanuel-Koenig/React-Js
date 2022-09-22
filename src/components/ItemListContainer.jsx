@@ -1,6 +1,7 @@
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { data } from '../mocks/mockData';
+import { db } from '../firebase/firebase';
 import ItemList from './ItemList';
 import "./itemListContainer.css";
 
@@ -11,19 +12,23 @@ const [listProducts, setListProducts]=useState([])
 const [loading, setLoading]=useState(false)
 const {categoryId} = useParams()
 
-useEffect(() => {
+useEffect(()=>{
   setLoading(true)
-  data
-.then((res) => {
-  if (categoryId) {
-    setListProducts(res.filter((item)=> item.category === categoryId))
-  } else {
-    setListProducts(res)
-  }
-})
-.catch((error)=> console.log(error))
-.finally(()=> setLoading(false))
+  const products = categoryId ? query(collection(db, "products"), where("category", "==", categoryId)) : collection(db, "products");
+  getDocs(products)
+  .then((res)=>{
+    const list = res.docs.map((product)=>{
+      return {
+        id:product.id,
+        ...product.data()
+      }
+    })
+    setListProducts(list)
+  })
+  .catch((error)=>console.log(error))
+  .finally(()=> setLoading(false))
 },[categoryId])
+
 
   return (
     <div className='itemList-container'>
