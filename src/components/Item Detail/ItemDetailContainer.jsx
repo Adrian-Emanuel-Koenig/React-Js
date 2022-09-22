@@ -1,8 +1,9 @@
+import { collection, doc, getDoc } from 'firebase/firestore'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { data } from '../../mocks/mockData'
+import { db } from '../../firebase/firebase'
 import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer() {
@@ -10,13 +11,20 @@ function ItemDetailContainer() {
   const [loading, setLoading]= useState(true)
   const{id} =useParams()
 
-useEffect(()=>{
-data
-.then((res)=>setProductDetail(res.find((item)=> item.id === id)))
-.catch((error)=> console.log(error))
-.finally(()=> setLoading(false))
-},[id])
-
+  useEffect(() => {
+    const productsCollection = collection(db, "products")
+    const referenceDoc = doc(productsCollection, id)
+    getDoc(referenceDoc)
+    .then((res)=>{
+      setProductDetail({
+        id:res.id,
+        ...res.data()
+      })
+    })
+    .catch((error)=>console.log(error))
+    .finally(()=> setLoading(false))
+  }, [id])
+  
   return (
     <div>
       {loading ? <p>Loading...</p> : <ItemDetail productDetail={productDetail}/>}
