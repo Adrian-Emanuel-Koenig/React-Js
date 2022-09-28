@@ -33,7 +33,7 @@ useEffect(()=>{
   return (
     <div className='itemList-container'>
       <h3 className='tittle'>{greeting}</h3>
-      {loading ? <p>Loading...</p> : <ItemList listProducts={listProducts}/>}  
+      {loading ? <img src='https://cutewallpaper.org/21/loading-animated-gif-transparent-background/wesusa-on-Scratch.png'alt='Loading...'/> : <ItemList listProducts={listProducts}/>}  
     </div>
   )
 }

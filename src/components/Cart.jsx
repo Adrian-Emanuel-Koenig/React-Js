@@ -21,7 +21,7 @@ const {cart, cartTotal, clear}=useCart()
             {cart.map((bought)=> <CartProducts key={bought.id} bought={bought}/>)}
           <span>Total payment: ${cartTotal()}</span>
           <Button onClick={clear}>Clear Cart</Button>
-          <Button>Buy products</Button>
+          <Link to={('/checkout')}><Button>Buy products</Button></Link>
         </div>
       }
     </div>
