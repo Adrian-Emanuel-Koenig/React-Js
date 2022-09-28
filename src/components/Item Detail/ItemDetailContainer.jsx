@@ -27,7 +27,7 @@ function ItemDetailContainer() {
   
   return (
     <div>
-      {loading ? <p>Loading...</p> : <ItemDetail productDetail={productDetail}/>}
+      {loading ? <img src='https://cutewallpaper.org/21/loading-animated-gif-transparent-background/wesusa-on-Scratch.png'alt='Loading...'/> : <ItemDetail productDetail={productDetail}/>}
       </div>
   )
 }
