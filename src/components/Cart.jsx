@@ -1,31 +1,31 @@
-import { Button } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import CartProducts from './CartProducts'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function Cart() {
-
+const navigate = useNavigate()
 const {cart, cartTotal, clear}=useCart()
 
   return (
-    <div>
+    <div className='cartContainer'>
       {
         !cart.length
         ?<div>
-          <h3>Cart empty</h3>
-          <Link to={('/')}><Button> Back to Home</Button></Link>
+          <Typography variant='h3'>Cart empty<ShoppingCartOutlinedIcon fontSize="large"/></Typography>
+          <Button variant="contained" onClick={()=>{navigate("/")}}> Back to Home</Button>
         </div>
         :<div>
-          <h3>Cart</h3>
+          <Typography variant='h3'>My Cart</Typography>
             {cart.map((bought)=> <CartProducts key={bought.id} bought={bought}/>)}
-          <span>Total payment: ${cartTotal()}</span>
-          <Button onClick={clear}>Clear Cart</Button>
-          <Link to={('/checkout')}><Button>Buy products</Button></Link>
+          <Typography variant='h4'> Total payment: ${cartTotal()} </Typography>
+          <Button variant="contained" color="primary" onClick={clear}>Clear Cart</Button>
+          <Button variant="contained" color="success" onClick={()=> navigate('/checkout')} >Buy products</Button>
         </div>
       }
     </div>
   )
 }
-
 export default Cart

@@ -88,11 +88,35 @@ const products = [{
     stock: 5
 }, {
     id: "11",
-    mark: "Ibanez",
-    tag: "Ibanez TMB 4 String Bass Guitar, Right, Black (TMB30BK)",
+    mark: "Gibson",
+    tag: 'Jerry Cantrell "Atone" Songwriter - Ebony',
+    category: "acoustic",
+    price: 3749,
+    img: require("https://images.ctfassets.net/m8onsx4mm13s/6TjMM7nhOY3574lmGHMvX3/964baae400ac36bcb2af0c643c7f92bc/__static.gibson.com_product-images_Acoustic_ACC9WR562_Ebony_front-500_500.png?fit=fill&w=250&h=500"),
+    stock: 10
+}, {
+    id: "11",
+    mark: "Gibson",
+    tag: "Les Paul Junior Tribute DC Bass",
     category: "bass",
     price: 999,
-    img: require("../assets/imgs/E-Basses/11.jpg"),
+    img: require("https://images.ctfassets.net/m8onsx4mm13s/45G4u299LdeICDxbjChvZq/7451bd1a6fd90fa9b1ceac9e90a9ec96/__static.gibson.com_product-images_USA_USACYC512_Worn_Ebony_front-500x500.png?fit=fill&w=250&h=500"),
+    stock: 5
+}, {
+    id: "11",
+    mark: "Gibson",
+    tag: "Dove Original - Vintage Cherry Sunburst",
+    category: "acoustic",
+    price: 4499,
+    img: require("https://images.ctfassets.net/m8onsx4mm13s/5zcSqRVN7ar5jNVzF2iuJd/1b4bb055be5f582e98cabe1824792e86/__static.gibson.com_product-images_Acoustic_ACCN8H793_Vintage_Cherry_Sunburst_front-500_500.png?fit=fill&w=250&h=500"),
+    stock: 10
+}, {
+    id: "11",
+    mark: "Gibson",
+    tag: "Eric Church Hummingbird Dark - Cobra Burst",
+    category: "acoustic",
+    price: 3299,
+    img: require("https://images.ctfassets.net/m8onsx4mm13s/0ZZwXXXtjewpzWyLJwHQqH/3e166b91593f1fb7f7c2b7f815d02dd8/__static.gibson.com_product-images_Acoustic_ACCNEP695_Cobra_Burst_front-500_500.png?fit=fill&w=250&h=500"),
     stock: 10
 }]
 

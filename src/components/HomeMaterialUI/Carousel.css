@@ -1,0 +1,26 @@
+.CarouselContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+.CarouselImg{
+    width: 1400px;
+    height: 400px;
+    border-radius: 50px;
+    animation: opacity 7s linear infinite;
+}
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

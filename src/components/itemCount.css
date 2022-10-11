@@ -8,14 +8,13 @@
 
 .itemCount button {
     width: 40px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 15px;
-    background-color: cyan;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.buttonBuy {
+.btn-dark{
     margin: 10px;
     width: 120px;
     font-size: 1.2rem;

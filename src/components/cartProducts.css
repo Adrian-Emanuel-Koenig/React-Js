@@ -10,11 +10,13 @@
     border-radius: 50px;
     border: 2px solid black;
     margin: 10px;
+    max-height: 320px;
 }
 
 .cartProducts img{
     width: 200px;
-    height: 500px;
+    height: 300px;
+    border-radius: 50px;
 }
 
 .cartProducts div{
@@ -22,12 +24,26 @@
     flex-direction: column;
     gap: 20px;
     justify-content: space-between;
-padding: 2%;
+    padding: 2%;
 }
 .cartProducts button{
     padding: 10px;
     width: 100px;
     height: 50px;
     margin: 5px 0;
-    border: 1px solid rgb(55, 55, 241);
+}
+.cartContainer{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.cartContainer h3, .cartContainer h4{
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+.cartContainer button{
+    margin: 10px;
 }

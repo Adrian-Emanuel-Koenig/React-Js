@@ -1,5 +1,7 @@
+import { Button, Typography } from '@mui/material';
 import React from 'react';
 import "./itemCount.css";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export default function ItemCount({stock, initial, onAdd, count, setCount}) {
 
@@ -18,10 +20,10 @@ const add = () =>{
 return (
     <>
     <div className='itemCount'>
-        <button onClick={remove}>-</button>
-        <span>{count}</span>
-        <button onClick={add}>+</button>
+        <Button variant="contained" color="error" onClick={remove}>-</Button>
+        <Typography>{count}</Typography>
+        <Button variant="contained" color="success" onClick={add}>+</Button>
     </div>
-        <button className='buttonBuy' onClick={onAdd}>Buy</button>
+        <Button variant="contained" color="primary"  size="large" onClick={onAdd}><AddShoppingCartIcon/>Add to Cart</Button>
     </>
 )}

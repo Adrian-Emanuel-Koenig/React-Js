@@ -7,21 +7,20 @@
 }
 
 body {
-  background: url(../src/assets/imgs/playing-guitar-jared-dines.gif);
+  /* background: url(../src/assets/imgs/playing-guitar-jared-dines.gif); */
+  background: url(https://www.todofondos.net/wp-content/uploads/wood-wallpaper-wood-background-hd-134649-descargar-fondo-de-pantalla-hd.-imagen-hd-1080p-de-madera-1024x576.jpg);
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: white;
-}
-
-main {
-  padding: 2% 5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   text-align: center;
 }
+
+
 
 .Item-Card {
   background-color: rgb(255, 255, 255);
@@ -29,19 +28,22 @@ main {
   padding: 2%;
   border-radius: 50px;
   margin: 20px;
-  width: 25%;
-  border: 1px solid rgb(255, 255, 255);
-  box-shadow: 0 0 20px rgb(107, 0, 107), 0 0 30px rgb(107, 0, 107), inset 0 0 10px rgb(92, 5, 92), inset 0 0 20px rgb(92, 5, 92) ;
+  width: 20%;
+  height: 700px;
+  border: 2px solid black;
+  box-shadow: 0 0 5px black, 0 0 10px black, inset 0 0 10px black;
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 .Item-Card img{
 margin: 20px;
 width: 40%;
-height: 400px;
+height: 350px;
 }
 .Item-Card button{
-  color: cyan;
-  background-color: black;
   padding: 2%;
   border-radius: 50px;
   width: 25%;
@@ -53,10 +55,8 @@ a{
   text-decoration: none;
   color: white;
 }
-header {
-  padding: 3px;
-}
-h5, h6:hover{
-  text-shadow: 0 0 10px white, 0 0 20px rgb(81, 134, 212), 0 0 30px cyan ;
+
+h5:hover, h6:hover{
+  text-shadow: 0 0 10px white, 0 0 20px rgb(81, 134, 212), 0 0 30px wheat;
   cursor: pointer;
 }

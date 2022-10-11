@@ -1,17 +1,19 @@
+import { Button, Typography } from '@mui/material';
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 function Item({product}) {
+	const navigate = useNavigate()
 	const {mark, tag, img, price, id} = product;
 
   return (
 	<div className='Item-Card'>
-		<h3>{mark}</h3>
-		<h4>{tag}</h4>
+		<Typography variant='h4'>{mark}</Typography>
+		<Typography variant='h6'>{tag}</Typography>
 		<img src={img} alt={tag}/>
-		<p>${price}</p>
-		<Link to={`/item/${id}`}><button>View</button></Link>
+		<Typography variant='h6'>${price}</Typography>
+		<Button color="primary" variant="contained" onClick={()=>{navigate(`/item/${id}`)}}>View</Button>
 	</div>
   )
 }

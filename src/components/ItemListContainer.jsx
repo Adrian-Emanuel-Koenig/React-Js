@@ -1,9 +1,11 @@
+import { Box } from '@mui/material';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { db } from '../firebase/firebase';
 import ItemList from './ItemList';
 import "./itemListContainer.css";
+import LinearProgress from '@mui/material/LinearProgress';
 
 
 export default function ItemListContainer({greeting}) {
@@ -33,7 +35,9 @@ useEffect(()=>{
   return (
     <div className='itemList-container'>
       <h3 className='tittle'>{greeting}</h3>
-      {loading ? <img src='https://cutewallpaper.org/21/loading-animated-gif-transparent-background/wesusa-on-Scratch.png'alt='Loading...'/> : <ItemList listProducts={listProducts}/>}  
+      {loading ? <Box sx={{ width: '100%' }}>
+      <LinearProgress />
+    </Box> : <ItemList listProducts={listProducts}/>}  
     </div>
   )
 }
