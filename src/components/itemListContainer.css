@@ -6,10 +6,6 @@
     text-align: center;
     width: 100%;
     text-align: center;
-    background-color: #b806ff34;
-    border-radius: 50px;
-    border: 2px solid white;
-    box-shadow: 0 0 15px white;
 }
 
 .tittle {
@@ -19,4 +15,5 @@
 
 .lista {
     list-style: none;
+    color: rgba(0, 0, 0, 0.5);
 }

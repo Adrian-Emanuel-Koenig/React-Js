@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { db } from '../../firebase/firebase'
 import ItemDetail from './ItemDetail'
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 function ItemDetailContainer() {
   const [productDetail, setProductDetail]= useState({})
@@ -27,7 +29,9 @@ function ItemDetailContainer() {
   
   return (
     <div>
-      {loading ? <img src='https://cutewallpaper.org/21/loading-animated-gif-transparent-background/wesusa-on-Scratch.png'alt='Loading...'/> : <ItemDetail productDetail={productDetail}/>}
+      {loading ? <Box sx={{ width: '100%' }}>
+      <LinearProgress />
+    </Box>: <ItemDetail productDetail={productDetail}/>}
       </div>
   )
 }

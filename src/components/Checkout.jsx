@@ -1,4 +1,4 @@
-import { Button, Input } from '@mui/material'
+import { Button, Input, CircularProgress, Typography } from '@mui/material'
 import React from 'react'
 import { useState } from 'react'
 import { useCart } from '../context/CartContext'
@@ -45,27 +45,31 @@ function Checkout() {
         }
     }
     if(loading){
-        return <img src='https://cutewallpaper.org/21/loading-animated-gif-transparent-background/wesusa-on-Scratch.png'alt='Loading...'/>
+        return <CircularProgress size={150}/>
     }
     
     return (
         <div className='checkout'>
             {!orderId
             ?<div>
-            <h3>Checkout</h3>
+                <Typography variant='h3'>Checkout</Typography>
             <form onSubmit={buyProducts}>
             <Input type='text' placeholder='Name' name="name" onChange={ordersDetails}></Input>
             <Input type='number' placeholder='Number' name='phone' onChange={ordersDetails}></Input>
             <Input  type='email' placeholder='Email' name='email' onChange={ordersDetails}></Input>
-            <Button type='submit'>Buy</Button>     
-            {require && <p>Complete the form</p>}     
+            <Button type='submit' size='large' variant="contained" color="primary">Send Order</Button>
+            {require && <Typography variant='h5'>Complete the form</Typography>}     
             </form>
             </div>
             :
             <div>
-                <h2>Thanks for your purchase</h2>
-                <h3>Your order is: {orderId}</h3>
-                <Button onClick={()=> navigate('/')} >Return</Button>
+                <Typography variant='h2' gutterBottom>
+                Thanks for your purchase
+                </Typography>
+                <Typography variant='h3' gutterBottom>
+                Your order is: {orderId}
+                </Typography>
+                <Button onClick={()=> navigate('/home')} >Return</Button>
             </div>}
         </div>
     )

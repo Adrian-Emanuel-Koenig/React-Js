@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import ItemCount from '../ItemCount'
 import "./itemDetail.css";
 import { useCart } from '../../context/CartContext';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Alert, Button,  Divider, Typography } from '@mui/material';
 
 function ItemDetail({productDetail}) {
     const[count, setCount]=useState(1)
     const [bought, setBought] = useState(false)
     const {id, mark, tag, img, price, stock} = productDetail;
     const {addItem}=useCart();
+    const navigate = useNavigate()
 
     const onAdd = () => {
         const purchase = {
@@ -24,16 +26,22 @@ function ItemDetail({productDetail}) {
     }
 
     return (
+        <div className='detailContainer'>
         <div className='Item-Detail'>
-            <h3>{mark}</h3>
-            <h4>{tag}</h4>
+            <Typography variant='h4'>{mark}</Typography>
+            <Typography variant='p'>{tag}</Typography>
             <img src={img} alt={tag}/>
-            <p>${price}</p>
-            <p>Stock: {stock}</p>
+            <Typography variant='h4'>${price}</Typography>
+            <Typography variant='p'>Stock: {stock}</Typography>
             {!bought
                 ? <ItemCount stock={stock} initial={1} onAdd={onAdd} count={count} setCount={setCount}/>
-                : <button className='btnCart' ><Link to={"/cart"}>Go to cart</Link></button>
+                : <Divider>
+                    <Alert severity="success">{count} {tag} Added to Cart</Alert>
+                    <Button variant='contained' color='primary' onClick={()=>{navigate("/cart")}}>Go to cart</Button>
+                    <Button variant='contained' color='primary' onClick={()=>{navigate("/cart")}}>Continue Buying</Button>
+                </Divider>
             }
+        </div>
         </div>
     )
 }
